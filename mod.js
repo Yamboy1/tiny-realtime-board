@@ -13,4 +13,4 @@ const getBoard = async stop => {
 		.join("\n");
 };
 
-getBoard(8060).then(console.log);
+if (window) window.getBoard = getBoard;
