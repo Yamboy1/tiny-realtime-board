@@ -5,7 +5,7 @@
 		<script src="https://unpkg.com/unfetch@4.1.0/dist/unfetch.js"></script>
 		<script src="https://github.com/Yamboy1/tiny-realtime-board/blob/master/mod.js"></script>
 		<script>
-			const stop = document.location.pathname.match(/\/\d{4}/)[1]
+			const stop = document.location.hash.match(/#\d{4}/)[1];
 			getBoard(stop).then(document.write);
 		</script>
 	</head>
