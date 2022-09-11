@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Realtime Board</title>
+        <script src="./mod.js"></script>
+        <script>
+            const params = new URLSearchParams(window.location.search);
+            const city = urlParams.get("myParam") ?? null;
+            const stop = params.get("stop") ?? null;
+            
+            if (city === null || stop == null) {
+                document.write("Invalid parameters");
+            } else {
+                getBoard(city, stop).then(document.write).catch(() => document.write("An error occurred, check your parameters"));
+            }
+        </script>
+    </head>
+    <body>
+    </body>
+</html>
