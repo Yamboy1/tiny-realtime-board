@@ -12,7 +12,6 @@
                 document.write("Invalid parameters");
             } else {
                 const text = await (getBoard(city, stop)
-                    .then(text => document.write(text))
                     .catch(() => document.write("An error occurred, check your parameters")));
                 
                 document.body.innerText = text;
