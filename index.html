@@ -3,7 +3,7 @@
     <head>
         <title>Realtime Board</title>
         <script src="./mod.js"></script>
-        <script module>
+        <script type="module">
             const params = new URLSearchParams(window.location.search);
             const city = params.get("city") ?? null;
             const stop = params.get("stop") ?? null;
