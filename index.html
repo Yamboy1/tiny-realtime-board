@@ -11,7 +11,11 @@
             if (city === null || stop == null) {
                 document.write("Invalid parameters");
             } else {
-                getBoard(city, stop).then(data => data.json()).then(document.write).catch(() => document.write("An error occurred, check your parameters"));
+                const text = await (getBoard(city, stop)
+                    .then(text => document.write(text))
+                    .catch(() => document.write("An error occurred, check your parameters")));
+                
+                document.body.innerText = text;
             }
         </script>
     </head>
