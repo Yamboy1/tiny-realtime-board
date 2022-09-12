@@ -1,5 +1,5 @@
 const getBoard = async (city,stop) => {
-	const json = await fetch(`https://waka.app/a/nz-${city}/station/${stop}/times/`).then(resp => resp.json());
+	const json = await fetch(`https://corsdobbynz.azurewebsites.net/waka.app/a/nz-${city}/station/${stop}/times/`).then(resp => resp.json());
 	return json.trips
 		.sort((x,y) => x.departure_time < y.departure_time)
 		.map(trip => ({
